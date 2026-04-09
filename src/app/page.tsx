@@ -3,8 +3,9 @@
 import { useEffect, useState, useCallback } from "react";
 import dynamic from "next/dynamic";
 import KnowledgePanel from "@/components/KnowledgePanel";
+import ChatPanel from "@/components/ChatPanel";
 
-// Dynamic import to avoid SSR issues with Three.js / WebGL
+// Dynamic import to avoid SSR issues with canvas/WebGL
 const BrainMap = dynamic(() => import("@/components/BrainMap"), {
   ssr: false,
   loading: () => (
@@ -42,6 +43,9 @@ export default function Home() {
       <div className="absolute inset-0">
         <BrainMap width={dimensions.width} height={dimensions.height} />
       </div>
+
+      {/* Chat Panel - Overlay on left */}
+      <ChatPanel />
 
       {/* Knowledge Panel - Overlay on right */}
       <KnowledgePanel />
