@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1600" viewBox="0 0 1280 1600">
+  <defs>
+    <linearGradient id="g" gradientTransform="rotate(18 0.5 0.5)">
+      <stop offset="0" stop-color="#7a1246"/>
+      <stop offset="1" stop-color="#c21d5b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="43%" cy="22%" r="55%">
+      <stop offset="0" stop-color="#ff5a3c" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#ff5a3c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="1600" fill="url(#g)"/>
+  <rect width="1280" height="1600" fill="url(#glow)"/>
+  <g opacity="0.12" stroke="#fff" stroke-width="2" fill="none">
+    <circle cx="516" cy="264" r="420"/>
+    <circle cx="387" cy="352" r="280"/>
+  </g>
+</svg>

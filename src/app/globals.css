@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --app-max: 460px;
+  --nav-h: 64px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+  background: #000;
+  color: #fff;
+  overscroll-behavior-y: none;
+}
+
+body {
+  /* Empêche le "rubber band" gris du navigateur : sensation app native */
+  background:
+    radial-gradient(120% 60% at 50% 0%, #1a1a1a 0%, #000 55%) fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Scroll fluide + momentum iOS, barres masquées partout */
+.no-scrollbar {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Rangées horizontales : snap doux, momentum */
+.row-scroll {
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-left: 16px;
+}
+.row-scroll > * {
+  scroll-snap-align: start;
+}
+
+.tap {
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+.tap:active {
+  transform: scale(0.94);
+  opacity: 0.85;
+}
+
+/* Zones sûres (encoche / barre gestuelle) */
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Conteneur "téléphone" centré sur grand écran */
+.app-shell {
+  width: 100%;
+  max-width: var(--app-max);
+  margin: 0 auto;
+  min-height: 100dvh;
+  position: relative;
+  background: #000;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+}
+
+/* Dégradé de lisibilité réutilisable */
+.fade-bottom {
+  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+}
