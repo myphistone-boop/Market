@@ -216,19 +216,20 @@ const _RAW: Omit<Course, "photo" | "photoBg">[] = [
 ];
 
 // Mots-clés pour de vraies photos thématiques (via loremflickr, réseau public).
+// Univers visuel : masculin, "alpha", élégant, leadership / politique.
 const KW: Record<string, string> = {
-  "growth-systeme": "startup,office",
-  "mindset-elite": "meditation,mindset",
-  "design-produit": "design,workspace",
-  "dev-fullstack": "coding,programming",
-  "contenu-viral": "camera,creator",
-  "ia-au-quotidien": "technology,circuit",
-  "finance-perso": "finance,money",
-  "prise-de-parole": "microphone,stage",
-  "montage-video": "video,editing",
-  "vente-b2b": "handshake,meeting",
-  "photo-mobile": "photography,camera",
-  "productivite-deep": "desk,notebook",
+  "growth-systeme": "businessman,suit",
+  "mindset-elite": "man,success",
+  "design-produit": "man,suit",
+  "dev-fullstack": "man,laptop",
+  "contenu-viral": "man,microphone",
+  "ia-au-quotidien": "man,technology",
+  "finance-perso": "businessman,money",
+  "prise-de-parole": "politician,podium",
+  "montage-video": "man,cinema",
+  "vente-b2b": "businessman,handshake",
+  "photo-mobile": "man,gentleman",
+  "productivite-deep": "man,office",
 };
 function hash(s: string): number {
   let h = 0;
