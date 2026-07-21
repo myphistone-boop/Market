@@ -216,20 +216,20 @@ const _RAW: Omit<Course, "photo" | "photoBg">[] = [
 ];
 
 // Mots-clés pour de vraies photos thématiques (via loremflickr, réseau public).
-// Univers visuel : sport, finance, costumes, luxe / réussite (rien d'autre).
+// Univers visuel : sport, finance, costumes, luxe (mots-clés SIMPLES = fiables).
 const KW: Record<string, string> = {
-  "growth-systeme": "businessman,suit",
-  "mindset-elite": "gym,fitness",
-  "design-produit": "luxury,watch",
-  "dev-fullstack": "businessman,office",
-  "contenu-viral": "luxury,car",
-  "ia-au-quotidien": "businessman,suit",
-  "finance-perso": "finance,money",
-  "prise-de-parole": "businessman,success",
-  "montage-video": "luxury,car",
-  "vente-b2b": "businessman,handshake",
-  "photo-mobile": "luxury,watch",
-  "productivite-deep": "gym,fitness",
+  "growth-systeme": "business",
+  "mindset-elite": "fitness",
+  "design-produit": "office",
+  "dev-fullstack": "business",
+  "contenu-viral": "car",
+  "ia-au-quotidien": "business",
+  "finance-perso": "money",
+  "prise-de-parole": "suit",
+  "montage-video": "car",
+  "vente-b2b": "office",
+  "photo-mobile": "watch",
+  "productivite-deep": "gym",
 };
 function hash(s: string): number {
   let h = 0;
