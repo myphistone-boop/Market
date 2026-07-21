@@ -16,8 +16,10 @@ export type Course = {
   level: Level;
   price: number; // en euros
   instructor: string;
-  poster: string; // ratio 2:3
-  backdrop: string; // large 16:9+
+  poster: string; // cover de marque (SVG local, repli)
+  backdrop: string; // backdrop de marque (SVG local, repli)
+  photo: string; // vraie photo thématique (portrait)
+  photoBg: string; // vraie photo thématique (large)
   badge?: "NOUVEAU" | "POPULAIRE" | "TOP 10";
   featured?: boolean;
   lessons: Lesson[];

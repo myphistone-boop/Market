@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { Play } from "lucide-react";
 import type { Course } from "@/types";
 import { useAppStore } from "@/store/useAppStore";
+import { CourseImg } from "./CourseImg";
 import clsx from "clsx";
 
 type Props = {
@@ -27,13 +27,7 @@ export function CourseCard({ course, width = 132, showProgress = false }: Props)
         className="relative overflow-hidden rounded-xl bg-delta-surface2"
         style={{ aspectRatio: "2 / 3" }}
       >
-        <Image
-          src={course.poster}
-          alt={course.title}
-          fill
-          sizes="140px"
-          className="object-cover"
-        />
+        <CourseImg course={course} />
 
         {course.badge && !showProgress && (
           <span className="absolute left-1.5 top-1.5 rounded bg-delta-red px-1.5 py-0.5 text-[9px] font-bold tracking-wide">

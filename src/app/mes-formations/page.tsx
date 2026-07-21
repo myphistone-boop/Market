@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { Play, Plus } from "lucide-react";
 import Link from "next/link";
 import { useAppStore } from "@/store/useAppStore";
 import { getCourse } from "@/data/courses";
 import { totalDuration } from "@/lib/format";
+import { CourseImg } from "@/components/CourseImg";
 
 export default function MesFormationsPage() {
   const purchased = useAppStore((s) => s.purchased);
@@ -36,7 +36,7 @@ export default function MesFormationsPage() {
                   className="tap flex w-full gap-3 rounded-xl bg-delta-surface p-2 text-left"
                 >
                   <div className="relative h-24 w-20 shrink-0 overflow-hidden rounded-lg">
-                    <Image src={c.poster} alt={c.title} fill sizes="80px" className="object-cover" />
+                    <CourseImg course={c} />
                   </div>
                   <div className="flex min-w-0 flex-1 flex-col">
                     <p className="truncate text-[15px] font-bold">{c.title}</p>
@@ -72,7 +72,7 @@ export default function MesFormationsPage() {
                 className="tap relative overflow-hidden rounded-xl bg-delta-surface2"
                 style={{ aspectRatio: "2/3" }}
               >
-                <Image src={c.poster} alt={c.title} fill sizes="140px" className="object-cover" />
+                <CourseImg course={c} />
               </button>
             ))}
           </div>

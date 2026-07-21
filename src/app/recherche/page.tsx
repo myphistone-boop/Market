@@ -1,10 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
 import { Search as SearchIcon, X, Play } from "lucide-react";
 import { COURSES } from "@/data/courses";
 import { useAppStore } from "@/store/useAppStore";
+import { CourseImg } from "@/components/CourseImg";
 
 export default function RecherchePage() {
   const [q, setQ] = useState("");
@@ -54,7 +54,7 @@ export default function RecherchePage() {
               className="tap flex w-full items-center gap-3 rounded-lg bg-delta-surface/60 p-1.5 text-left"
             >
               <div className="relative h-16 w-28 shrink-0 overflow-hidden rounded-md bg-delta-surface2">
-                <Image src={c.poster} alt={c.title} fill sizes="112px" className="object-cover" />
+                <CourseImg course={c} />
               </div>
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-semibold">{c.title}</p>

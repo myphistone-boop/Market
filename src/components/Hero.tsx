@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { Play, Plus, Check, Info } from "lucide-react";
 import type { Course } from "@/types";
 import { useAppStore } from "@/store/useAppStore";
+import { CourseImg } from "./CourseImg";
 import clsx from "clsx";
 
 export function Hero({ course }: { course: Course }) {
@@ -14,14 +14,7 @@ export function Hero({ course }: { course: Course }) {
   return (
     <section className="relative -mt-[1px] mb-2">
       <div className="relative h-[74dvh] w-full">
-        <Image
-          src={course.backdrop}
-          alt={course.title}
-          fill
-          priority
-          sizes="460px"
-          className="object-cover"
-        />
+        <CourseImg course={course} kind="backdrop" priority />
         {/* Dégradés : haut pour le topbar, bas pour fondu vers le contenu */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />

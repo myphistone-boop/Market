@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
+import { CourseImg } from "./CourseImg";
 import {
   Play,
   Plus,
@@ -86,13 +86,7 @@ function SheetContent({ courseId }: { courseId: string }) {
     <div className="no-scrollbar h-[calc(94dvh-20px)] overflow-y-auto pb-16">
       {/* En-tête visuel */}
       <div className="relative h-56 w-full">
-        <Image
-          src={course.backdrop}
-          alt={course.title}
-          fill
-          sizes="460px"
-          className="object-cover"
-        />
+        <CourseImg course={course} kind="backdrop" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-delta-surface via-delta-surface/70 to-transparent" />
         <button
           onClick={close}
@@ -176,13 +170,7 @@ function SheetContent({ courseId }: { courseId: string }) {
               return (
                 <li key={i} className="flex items-center gap-3 py-3">
                   <div className="relative h-14 w-24 shrink-0 overflow-hidden rounded-md bg-delta-surface2">
-                    <Image
-                      src={course.poster}
-                      alt=""
-                      fill
-                      sizes="96px"
-                      className="object-cover opacity-90"
-                    />
+                    <CourseImg course={course} className="opacity-90" />
                     <span className="absolute inset-0 flex items-center justify-center bg-black/25">
                       {locked ? (
                         <Lock size={16} className="text-white/90" />

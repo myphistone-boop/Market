@@ -13,7 +13,7 @@ function lessons(n: number, base: string): Course["lessons"] {
   }));
 }
 
-const _RAW: Course[] = [
+const _RAW: Omit<Course, "photo" | "photoBg">[] = [
   {
     id: "growth-systeme",
     title: "Le Système Growth",
@@ -215,11 +215,38 @@ const _RAW: Course[] = [
   },
 ];
 
-// Les affiches/backdrops sont dérivés de l'id (fichiers SVG dans /public).
+// Mots-clés pour de vraies photos thématiques (via loremflickr, réseau public).
+const KW: Record<string, string> = {
+  "growth-systeme": "startup,office",
+  "mindset-elite": "meditation,mindset",
+  "design-produit": "design,workspace",
+  "dev-fullstack": "coding,programming",
+  "contenu-viral": "camera,creator",
+  "ia-au-quotidien": "technology,circuit",
+  "finance-perso": "finance,money",
+  "prise-de-parole": "microphone,stage",
+  "montage-video": "video,editing",
+  "vente-b2b": "handshake,meeting",
+  "photo-mobile": "photography,camera",
+  "productivite-deep": "desk,notebook",
+};
+function hash(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+  return h;
+}
+const photo = (id: string) =>
+  `https://loremflickr.com/600/900/${KW[id] ?? "learning"}?lock=${hash(id) % 900}`;
+const photoBg = (id: string) =>
+  `https://loremflickr.com/1200/1500/${KW[id] ?? "learning"}?lock=${hash(id) % 900}`;
+
+// poster/backdrop = cover de marque (repli SVG local) ; photo/photoBg = vraie photo.
 export const COURSES: Course[] = _RAW.map((c) => ({
   ...c,
   poster: poster(c.id),
   backdrop: backdrop(c.id),
+  photo: photo(c.id),
+  photoBg: photoBg(c.id),
 }));
 
 export const CATEGORIES = [

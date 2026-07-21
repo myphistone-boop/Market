@@ -11,6 +11,7 @@ import {
   coursesByCategory,
 } from "@/data/courses";
 import { useAppStore } from "@/store/useAppStore";
+import { CourseImg } from "@/components/CourseImg";
 
 export default function HomePage() {
   const [cat, setCat] = useState("Tout");
@@ -75,8 +76,7 @@ function CategoryGrid({ title }: { title: string }) {
             className="tap relative overflow-hidden rounded-xl bg-delta-surface2"
             style={{ aspectRatio: "2/3" }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={c.poster} alt={c.title} className="h-full w-full object-cover" />
+            <CourseImg course={c} />
           </button>
         ))}
       </div>
