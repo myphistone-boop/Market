@@ -121,9 +121,9 @@ function SheetContent({ courseId }: { courseId: string }) {
         ) : (
           <button
             onClick={() => buy(course.id)}
-            className="btn-chrome tap mt-4 flex w-full items-center justify-center gap-2 rounded-md py-2.5 font-bold"
+            className="tap mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-delta-red py-2.5 font-bold text-white"
           >
-            <Play size={18} className="fill-black" />
+            <Play size={18} className="fill-white" />
             Débloquer — {euro(course.price)}
           </button>
         )}

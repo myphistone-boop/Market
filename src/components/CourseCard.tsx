@@ -30,7 +30,7 @@ export function CourseCard({ course, width = 132, showProgress = false }: Props)
         <CourseImg course={course} />
 
         {course.badge && !showProgress && (
-          <span className="edge absolute left-1.5 top-1.5 rounded bg-black/55 px-1.5 py-0.5 text-[9px] font-bold tracking-wide text-white/90 backdrop-blur-sm">
+          <span className="absolute left-1.5 top-1.5 rounded bg-delta-red px-1.5 py-0.5 text-[9px] font-bold tracking-wide">
             {course.badge}
           </span>
         )}

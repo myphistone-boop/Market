@@ -7,7 +7,7 @@ import { clerkEnabled } from "@/lib/auth";
 export default function ConnexionPage() {
   return (
     <div className="flex min-h-[100dvh] flex-col items-center justify-center px-6 py-16">
-      <span className="chrome-text mb-8 text-3xl font-extrabold tracking-[0.15em]">
+      <span className="mb-8 text-3xl font-extrabold tracking-tighter text-delta-red">
         DELTA
       </span>
       {clerkEnabled ? (
@@ -34,7 +34,7 @@ function Notice() {
       </p>
       <Link
         href="/"
-        className="btn-chrome tap mt-5 inline-block rounded-md px-5 py-2.5 text-sm font-bold"
+        className="tap mt-5 inline-block rounded-md bg-delta-red px-5 py-2.5 text-sm font-bold"
       >
         Explorer Delta
       </Link>

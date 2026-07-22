@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1600" viewBox="0 0 1280 1600">
   <defs>
     <linearGradient id="g" gradientTransform="rotate(32 0.5 0.5)">
-      <stop offset="0" stop-color="#101414"/>
-      <stop offset="1" stop-color="#242e2b"/>
+      <stop offset="0" stop-color="#0b3b2e"/>
+      <stop offset="1" stop-color="#0e7a4f"/>
     </linearGradient>
     <radialGradient id="glow" cx="57%" cy="24%" r="55%">
-      <stop offset="0" stop-color="#94a49b" stop-opacity="0.8"/>
-      <stop offset="1" stop-color="#94a49b" stop-opacity="0"/>
+      <stop offset="0" stop-color="#37c98a" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#37c98a" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <rect width="1280" height="1600" fill="url(#g)"/>

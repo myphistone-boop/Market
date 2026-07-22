@@ -6,16 +6,12 @@ const config: Config = {
     extend: {
       colors: {
         delta: {
-          // Thème carbone : accent chrome/argent (remplace le rouge).
-          red: "#d3d8de", // accent chrome (conservé sous ce nom)
-          redDark: "#9aa0a8",
-          chrome: "#d3d8de",
-          steel: "#8b929b",
-          bg: "#08090a",
-          surface: "#101216",
-          surface2: "#181b20",
-          line: "#2b2f36",
-          muted: "#868c95",
+          red: "#E50914",
+          redDark: "#B00610",
+          bg: "#000000",
+          surface: "#141414",
+          surface2: "#1f1f1f",
+          muted: "#8a8a8a",
         },
       },
       fontFamily: {

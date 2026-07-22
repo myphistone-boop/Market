@@ -36,7 +36,7 @@ function useReal(): CurrentUser {
             .getFullYear()
             .toString(),
           plan: "Accès Premium",
-          avatarColor: "#20242a",
+          avatarColor: "#E50914",
         }
       : null,
     signOut: () => signOut(),

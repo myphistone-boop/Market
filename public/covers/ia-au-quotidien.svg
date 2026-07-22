@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
   <defs>
     <linearGradient id="g" gradientTransform="rotate(242 0.5 0.5)">
-      <stop offset="0" stop-color="#0e1316"/>
-      <stop offset="1" stop-color="#212b30"/>
+      <stop offset="0" stop-color="#062a3a"/>
+      <stop offset="1" stop-color="#0e6e8c"/>
     </linearGradient>
     <radialGradient id="glow" cx="22%" cy="-2%" r="60%">
-      <stop offset="0" stop-color="#8fa2ab" stop-opacity="0.75"/>
-      <stop offset="1" stop-color="#8fa2ab" stop-opacity="0"/>
+      <stop offset="0" stop-color="#18c2c2" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#18c2c2" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glow2" cx="33%" cy="48%" r="55%">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
@@ -25,7 +25,7 @@
     <circle cx="132" cy="384" r="150"/>
   </g>
   <rect width="600" height="900" fill="url(#vig)"/>
-  <text x="60" y="90" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="30" letter-spacing="1" fill="#d3d8de">DELTA</text>
+  <text x="60" y="90" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="30" letter-spacing="1" fill="#E50914">DELTA</text>
   <text font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="78" fill="#ffffff" letter-spacing="-1"><tspan x="60" y="427">L'IA au</tspan><tspan x="60" y="507">Quotidien</tspan></text>
-  <text x="60" y="600" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="24" fill="#8fa2ab" letter-spacing="3">TECH</text>
+  <text x="60" y="600" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="24" fill="#18c2c2" letter-spacing="3">TECH</text>
 </svg>

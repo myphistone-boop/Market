@@ -28,7 +28,7 @@ export default function ComptePage() {
       {/* Profil */}
       <div className="flex items-center gap-3">
         <div
-          className="edge flex h-14 w-14 items-center justify-center rounded-xl text-xl font-extrabold text-white/90"
+          className="flex h-14 w-14 items-center justify-center rounded-xl text-xl font-extrabold"
           style={{ backgroundColor: user.avatarColor }}
         >
           {user.firstName.charAt(0)}
@@ -89,7 +89,7 @@ export default function ComptePage() {
 function SignedOut() {
   return (
     <div className="safe-top flex min-h-[80dvh] flex-col items-center justify-center px-6 text-center">
-      <span className="chrome-text mb-6 text-3xl font-extrabold tracking-[0.15em]">
+      <span className="mb-6 text-3xl font-extrabold tracking-tighter text-delta-red">
         DELTA
       </span>
       <p className="text-xl font-bold">Ton espace formations</p>
@@ -98,7 +98,7 @@ function SignedOut() {
       </p>
       <Link
         href="/connexion"
-        className="btn-chrome tap mt-6 w-full max-w-xs rounded-md py-3 text-center text-sm font-bold"
+        className="tap mt-6 w-full max-w-xs rounded-md bg-delta-red py-3 text-center text-sm font-bold"
       >
         Se connecter
       </Link>
