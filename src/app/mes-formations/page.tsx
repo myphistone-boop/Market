@@ -94,7 +94,7 @@ function EmptyState() {
       </p>
       <Link
         href="/"
-        className="tap mt-5 rounded-md bg-delta-red px-5 py-2.5 text-sm font-bold"
+        className="btn-chrome tap mt-5 rounded-md px-5 py-2.5 text-sm font-bold"
       >
         Voir le catalogue
       </Link>

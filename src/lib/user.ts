@@ -15,5 +15,5 @@ export const demoUser: DemoUser = {
   email: "myphistone@gmail.com",
   memberSince: "2025",
   plan: "Accès Premium",
-  avatarColor: "#E50914",
+  avatarColor: "#20242a",
 };

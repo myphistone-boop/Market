@@ -11,10 +11,10 @@ export function Providers({ children }: { children: React.ReactNode }) {
     <ClerkProvider
       appearance={{
         variables: {
-          colorPrimary: "#E50914",
-          colorBackground: "#141414",
+          colorPrimary: "#d3d8de",
+          colorBackground: "#101216",
           colorText: "#ffffff",
-          colorInputBackground: "#1f1f1f",
+          colorInputBackground: "#181b20",
           colorInputText: "#ffffff",
           borderRadius: "10px",
         },

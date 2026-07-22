@@ -27,7 +27,7 @@ export function TopBar({ active, onSelect }: Props) {
       )}
     >
       <div className="flex items-center justify-between px-4 pt-3">
-        <span className="select-none text-2xl font-extrabold tracking-tighter text-delta-red">
+        <span className="chrome-text select-none text-2xl font-extrabold tracking-[0.15em]">
           DELTA
         </span>
       </div>
